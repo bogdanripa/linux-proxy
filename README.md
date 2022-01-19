@@ -18,14 +18,14 @@ Note: both the client and the target machine must share a key (USERKEY) that wil
 
 How this works:
 * On the target machine (the one accepting connections) first calls http://SERVER-IP:8080/init/USERKEY
-** SERVER-IP is where this project is being deployed
-** The USERKEY can only contain word chars and digits
-** In the response it will find a port number (PORTNUMBER) to be used later on
+    * SERVER-IP is where this project is being deployed
+    * The USERKEY can only contain word chars and digits
+    * In the response it will find a port number (PORTNUMBER) to be used later on
 * On the server, run the following command (note that you must have socat installed):
-** socat TCP4:SERVER-IP:PORTNUMBER TCP4:localhost:LOCALPORT
-** PORTNUMBER must match the response from the previous call
-** LOCALPORT must be the local port you want to forward. For example - the RDP port is 3389
+    * socat TCP4:SERVER-IP:PORTNUMBER TCP4:localhost:LOCALPORT
+    * PORTNUMBER must match the response from the previous call
+    * LOCALPORT must be the local port you want to forward. For example - the RDP port is 3389
 * On on the client machine, you must call http://SERVER-IP:8080/connect/USERKEY
-** The USERKEY must be the same as above
-** In the response it will find a port number (CLIENTPORTNUMBER) that you will use later on
+    * The USERKEY must be the same as above
+    * In the response it will find a port number (CLIENTPORTNUMBER) that you will use later on
 * On the client machine, you can now connect to SERVER-IP on port CLIENTPORTNUMBER to access the LOCALPORT on your target machine
