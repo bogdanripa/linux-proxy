@@ -3,14 +3,14 @@
 A proxy that connects a client to a target machine - both behind a firewall, as a 1:1 connection.
 Example: If you want to RDP into a Windows machine that is in a different network, and none of you have public IPs
 
-    ---------------
-    | linux proxy |
-    ---------------
-      |          |
-      |          |
-----------    ----------
-| client |    | target |
-----------    ----------
+     ---------------
+     | linux proxy |
+     ---------------
+       |          |
+       |          |
+ ----------    ----------
+ | client |    | target |
+ ----------    ----------
 
 Note: both the client and the target machine must share a key (USERKEY) that will be used to identify them and map the TCP ports 
 
