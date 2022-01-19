@@ -29,3 +29,10 @@ How this works:
     * The **USERKEY** must be the same as above
     * In the response it will find a port number (**CLIENTPORTNUMBER**) that you will use later on
 * On the client machine, you can now connect to **SERVER-IP** on port **CLIENTPORTNUMBER** to access the **LOCALPORT** on your target machine
+
+## Server set-up
+1. [Install socat](https://www.google.com/search?q=install+socat)
+2. Install npm, node, git
+3. git checkout
+4. npm install
+5. npm start
