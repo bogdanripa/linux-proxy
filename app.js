@@ -14,7 +14,7 @@ function log(msg) {
 	console.log(new Date().toJSON().slice(0, 19).replace('T', ' ') + ' | ' + msg);
 }
 
-// generates a unique port name that is not already being used
+// generates a unique port number that is not already being used
 function generateUniquePort() {
 	var p = Math.floor(Math.random() * portStart/2);
 	var pi = p;
